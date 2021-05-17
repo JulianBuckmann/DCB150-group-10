@@ -5,16 +5,9 @@
     Roeland Hoefsloot
 */ 
 
-int[] weights = [90,90,90,90,90,90,90,90,90,90];
-
-void setup(){
-  
-}
-
-float i = random(0.00,500.00); //random money values to test with
-float i_money = Math.round(i * 100.0) / 100.0;
-print("money =", i_money, "\n");
-
+int[] weights = {90,90,90,90,90,90,90,90,90,90};   //Weights of different denominations in grams
+float i = random(0.00,500.00);                     //Random money values to test with
+float i_money = Math.round(i * 100.0) / 100.0;     //Round of number to two decimal
 int fifty=0;
 int twenty=0;
 int ten=0;
@@ -38,8 +31,7 @@ weights[6] = 90;  // Assign weight of 50 eurocent coin
 weights[7] = 90;  // Assign weight of 20 eurocent coin
 weights[8] = 90;  // Assign weight of 10 eurocent coin
 weights[9] = 90;  // Assign weight of 5 eurocent coin
-*/
-
+void setup(){
 
   while(i_money>50){
     i_money =i_money-50;
@@ -94,4 +86,6 @@ print("amount of twenty cents ",fifth,"\n");
 print("amount of ten cents ",tenth,"\n");
 print("amount of five cents ",twentieth,"\n");
 
-\\caclulating total weight
+}
+
+//caclulating total weight

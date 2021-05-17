@@ -1,5 +1,9 @@
-// Roeland test 14:23
-// check
+/* --- TU/e Digital Craftsmanship ---
+    Group 10
+    Julian Buckmann
+    Daniel Bolt
+    Roeland Hoefsloot
+*/ 
 float i = random(0.00,500.00); //random money values to test with
 float i_money = Math.round(i * 100.0) / 100.0;
 print("money =", i_money, "\n");

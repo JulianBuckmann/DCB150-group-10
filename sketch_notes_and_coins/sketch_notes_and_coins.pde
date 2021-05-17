@@ -1,3 +1,4 @@
+// Roeland test 14:23
 float i = random(0.00,500.00); //random money values to test with
 float i_money = Math.round(i * 100.0) / 100.0;
 print("money =", i_money, "\n");

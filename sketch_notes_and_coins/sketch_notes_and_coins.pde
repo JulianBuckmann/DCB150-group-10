@@ -21,14 +21,14 @@ int twentieth=0;
 Table data;
 
 void setup(){
-  data = loadTable("data-set-julian.csv", "header");
+  data = loadTable("data-set-secure.csv", "header");
   
   int rows = data.getRowCount();
   ArrayList<Float> deductions = new ArrayList<Float>();
   
   for (int i = 0; i<rows; i++){
-    if (data.getString(i, 5).equals("Af")){
-      Float tempfloat = float(data.getString(i,6).replaceAll(",","."));
+    if (data.getString(i, 0).equals("Af")){
+      Float tempfloat = float(data.getString(i,1).replaceAll(",","."));
       deductions.add(tempfloat);
     }
   }

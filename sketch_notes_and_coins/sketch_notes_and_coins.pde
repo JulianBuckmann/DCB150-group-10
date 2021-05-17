@@ -21,7 +21,7 @@ int twentieth=0;
 Table data;
 
 void setup(){
-  data = loadTable("data-set-secure.csv", "header");
+  data = loadTable("data-set-secure-2.csv", "header");
   
   int rows = data.getRowCount();
   ArrayList<Float> deductions = new ArrayList<Float>();

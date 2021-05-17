@@ -6,8 +6,6 @@
 */ 
 
 float[] weights = {0.92,0.80,0.72,0.68,8.50,7.50,7.80,5.74,4.10,3.92};   //Weights of different denominations in grams
-float i = random(0.00,500.00);                     //Random money values to test with
-float i_money = Math.round(i * 100.0) / 100.0;     //Round of number to two decimal
 int fifty=0;
 int twenty=0;
 int ten=0;

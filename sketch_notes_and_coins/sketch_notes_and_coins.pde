@@ -23,8 +23,17 @@ Table data;
 void setup(){
   data = loadTable("data-set-julian.csv", "header");
   
-  println(data.getRowCount() + "regels");
+  int rows = data.getRowCount();
+  ArrayList<Float> deductions = new ArrayList<Float>();
   
+  for (int i = 0; i<rows; i++){
+    if (data.getString(i, 5).equals("Af")){
+      Float tempfloat = float(data.getString(i,6).replaceAll(",","."));
+      deductions.add(tempfloat);
+    }
+  }
+
+ 
 /*
   while(i_money>50){
     i_money =i_money-50;

@@ -5,7 +5,7 @@
     Roeland Hoefsloot
 */ 
 
-int[] weights = {90,90,90,90,90,90,90,90,90,90};   //Weights of different denominations in grams
+float[] weights = {0.92,0.80,0.72,0.68,8.50,7.50,7.80,5.74,4.10,3.92};   //Weights of different denominations in grams
 float i = random(0.00,500.00);                     //Random money values to test with
 float i_money = Math.round(i * 100.0) / 100.0;     //Round of number to two decimal
 int fifty=0;
@@ -33,50 +33,51 @@ void setup(){
     }
   }
 
- 
-/*
-  while(i_money>50){
-    i_money =i_money-50;
+int h = 0;
+while(h<deductions.size()){
+  while(deductions.get(h)>50){
+    deductions.set(h,deductions.get(h)-50);
     fifty++;
   }
-  while(i_money>20){
-    i_money =i_money-20;
+  while(deductions.get(h)>20){
+    deductions.set(h,deductions.get(h)-20);
     twenty++;
   }
-  while(i_money>10){
-    i_money =i_money-10;
+  while(deductions.get(h)>10){
+    deductions.set(h,deductions.get(h)-10);
     ten++;
   }
-  while(i_money>5){
-    i_money =i_money-5;
+  while(deductions.get(h)>5){
+    deductions.set(h,deductions.get(h)-5);
     five++;
   }
-  while(i_money>2){
-    i_money =i_money-2;
+  while(deductions.get(h)>2){
+    deductions.set(h,deductions.get(h)-2);
     two++;
   }
-  while(i_money>1){
-    i_money =i_money-1;
+  while(deductions.get(h)>1){
+    deductions.set(h,deductions.get(h)-1);
     one++;
   }
-  while(i_money>0.5){
-    i_money =i_money-0.5;
+  while(deductions.get(h)>0.5){
+    deductions.set(h,deductions.get(h)-0.5);
     half++;
   }
-  while(i_money>0.2){
-    i_money =i_money-0.2;
+  while(deductions.get(h)>0.2){
+    deductions.set(h,deductions.get(h)-0.2);
     fifth++;
   }
-  while(i_money>0.1){
-    i_money =i_money-0.1;
+  while(deductions.get(h)>0.1){
+    deductions.set(h,deductions.get(h)-0.1);
     tenth++;
   }
-    while(i_money>0.05){
-    i_money =i_money-0.05;
+    while(deductions.get(h)>0.03){
+    deductions.set(h,deductions.get(h)-0.05);
     twentieth++;
   }
-  
-  
+  h++;
+}
+
 print("amount of fifties ",fifty,"\n");
 print("amount of twenties ",twenty,"\n");
 print("amount of tens ",ten,"\n");
@@ -87,5 +88,7 @@ print("amount of fifty cents ",half,"\n");
 print("amount of twenty cents ",fifth,"\n");
 print("amount of ten cents ",tenth,"\n");
 print("amount of five cents ",twentieth,"\n");
-*/
+
+float tot_weight = fifty*weights[0]+twenty*weights[1]+ten*weights[2]+five*weights[3]+two*weights[4]+one*weights[5]+half*weights[6]+fifth*weights[7]+tenth*weights[8]+twentieth*weights[9];
+print("total weigth of money in grams = ",tot_weight,"\n");
 }

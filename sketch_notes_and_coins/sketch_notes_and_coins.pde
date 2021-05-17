@@ -86,3 +86,5 @@ print("amount of fifty cents ",half,"\n");
 print("amount of twenty cents ",fifth,"\n");
 print("amount of ten cents ",tenth,"\n");
 print("amount of five cents ",twentieth,"\n");
+
+\\caclulating total weight

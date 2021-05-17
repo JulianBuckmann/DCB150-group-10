@@ -4,6 +4,13 @@
     Daniel Bolt
     Roeland Hoefsloot
 */ 
+
+int[] weights = [90,90,90,90,90,90,90,90,90,90];
+
+void setup(){
+  
+}
+
 float i = random(0.00,500.00); //random money values to test with
 float i_money = Math.round(i * 100.0) / 100.0;
 print("money =", i_money, "\n");
@@ -19,7 +26,7 @@ int fifth=0;
 int tenth=0;
 int twentieth=0;
 
-
+/*
 int[] weights = new int[10];
 weights[0] = 90;  // Assign weight of 50 euro note
 weights[1] = 90;  // Assign weight of 20 euro note
@@ -31,7 +38,7 @@ weights[6] = 90;  // Assign weight of 50 eurocent coin
 weights[7] = 90;  // Assign weight of 20 eurocent coin
 weights[8] = 90;  // Assign weight of 10 eurocent coin
 weights[9] = 90;  // Assign weight of 5 eurocent coin
-
+*/
 
 
   while(i_money>50){
